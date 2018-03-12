@@ -15,7 +15,7 @@ def create_user(email, age, heart_rate):
     u.save() # save the user to the database
 
 def print_user(email):
-    user = models.User.objects.raw({"_id": email}).first() # Get the first user where _id=suyash@suyashkumar.com
+    user = models.User.objects.raw({"_id": email}).first() # Get the first user where _id=email
     print(user.email)
     print(user.heart_rate)
     print(user.heart_rate_times)
