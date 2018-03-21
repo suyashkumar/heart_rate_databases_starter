@@ -19,3 +19,11 @@ once your database is running and your connection string is set, you can run the
 ```
 python main.py
 ```
+
+## The Assignment + Hints
+
+This starter code _is not_ a flask server like you need to build in your assignment--`main.py` is an example module that contains several useful functions for creating a `User` (`create_user`) and updating a `User` with a new heart rate and heart rate timestamp (`add_heart_rate`). 
+
+`models.User` is a data model that represents the entity we want to store and retreive from the database. You can see that `User` is just a python class with some properties. 
+
+:eyes: When writing the `POST /api/heart_rate` endpoint, you need to first check if the user with the given email already exists in the database. If so, then you can use `add_heart_rate` to append a heart rate measurement to that user. If not, then you would want to `create_user`. I did not explicitly show you how to check if a user already exists in the database, but this is something you should be able to figure out based on the sample code + google + office hours! 
